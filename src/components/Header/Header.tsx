@@ -178,9 +178,9 @@ export default function Header() {
         <div className={styles.logoContainer}>
           <Link href="/" className={styles.logoFull}>
             {isTransparentPage || isNavyPage ? (
-              <img src="/ae-logo-white.svg" alt="Anglo-Eastern Logo" width="280" height="48" onError={(e) => { e.currentTarget.src = "/ae-logo-2.svg" }} />
-            ) : (
               <img src="/ae-logo-2.svg" alt="Anglo-Eastern Logo" width="280" height="48" />
+            ) : (
+              <img src="/ae-logo-dark.svg" alt="Anglo-Eastern Logo" width="280" height="48" />
             )}
           </Link>
         </div>
