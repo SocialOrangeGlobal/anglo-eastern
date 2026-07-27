@@ -153,7 +153,7 @@ export default function Header() {
 
     window.addEventListener('scroll', handleScroll);
     handleScroll();
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -185,10 +185,12 @@ export default function Header() {
           </Link>
         </div>
         <div className={`${styles.topRight} ${(isTransparentPage || isNavyPage) ? styles.topRightWhite : ''}`}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
+          {isScrolled && (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          )}
           <a href="#" className={`${styles.myAngloEastern} ${(isTransparentPage || isNavyPage) ? styles.myAngloEasternWhite : ''}`}>My Anglo-Eastern »</a>
         </div>
       </div>
@@ -214,9 +216,9 @@ export default function Header() {
             );
           })}
         </ul>
-        
+
         {/* Mobile Hamburger Toggle */}
-        <button 
+        <button
           className={`${styles.mobileMenuToggle} ${isMobileMenuOpen ? styles.open : ''} ${(isTransparentPage || isNavyPage) ? styles.toggleWhite : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Menu"
@@ -239,18 +241,19 @@ export default function Header() {
                 ) : (
                   <span>{item.label}</span>
                 )}
-                
+
                 {/* Render simple sub-links for mobile if they exist */}
                 {item.columns && (
                   <ul className={styles.mobileSubNavList}>
-                    {item.columns.map((col) => 
+                    {item.columns.map((col) =>
                       col.links.map((link) => (
                         <li key={link.label}>
-                          {link.href ? (
-                            <Link href={link.href} onClick={() => setIsMobileMenuOpen(false)}>{link.label}</Link>
-                          ) : (
-                            <a href="#" onClick={(e) => { e.preventDefault(); }}>{link.label}</a>
-                          )}
+                          <Link 
+                            href={link.href || (item as { href?: string }).href || '#'} 
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {link.label}
+                          </Link>
                         </li>
                       ))
                     )}
@@ -274,21 +277,13 @@ export default function Header() {
                   <ul className={styles.listLinks}>
                     {col.links.map((link) => (
                       <li key={link.label}>
-                        {(link as { href?: string }).href ? (
-                          <Link 
-                            href={(link as { href?: string }).href!}
-                            className={link.highlight ? styles.highlightLink : styles.normalLink}
-                          >
-                            {link.label}
-                          </Link>
-                        ) : (
-                          <a
-                            href="#"
-                            className={link.highlight ? styles.highlightLink : styles.normalLink}
-                          >
-                            {link.label}
-                          </a>
-                        )}
+                        <Link 
+                          href={(link as { href?: string }).href || (activeItem as { href?: string }).href || '#'}
+                          className={link.highlight ? styles.highlightLink : styles.normalLink}
+                          onClick={() => setActiveNav(null)}
+                        >
+                          {link.label}
+                        </Link>
                       </li>
                     ))}
                   </ul>
