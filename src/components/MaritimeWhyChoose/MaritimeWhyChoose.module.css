@@ -1,0 +1,29 @@
+.whyChooseSection {
+  background-color: #00456c;
+  color: #ffffff;
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}

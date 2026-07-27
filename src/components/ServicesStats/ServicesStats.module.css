@@ -1,0 +1,38 @@
+.statsSection {
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
+  padding: 40px 0;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.statValue {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .statValue {
+    font-size: 36px;
+  }
+}

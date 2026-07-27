@@ -1,0 +1,48 @@
+.ctaSection {
+  background-color: #012135;
+  padding: 80px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #7b9cb2;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.ctaButton:hover {
+  background-color: #ffffff;
+  color: #012135;
+}

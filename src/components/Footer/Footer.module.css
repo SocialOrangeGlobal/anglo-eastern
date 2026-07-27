@@ -1,0 +1,154 @@
+.footer {
+  background-color: #012135; /* Dark navy matching screenshot */
+  color: #ffffff;
+  padding-bottom: 100px;
+}
+
+.logoSection {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoText {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.mainFooter {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnTitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.linkList li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: opacity 0.2s;
+}
+
+.linkList li a:hover {
+  text-decoration: underline;
+}
+
+.portalColumn {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+}
+
+.portalTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.loginBtn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 16px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 32px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.loginBtn:hover {
+  background-color: #ffffff;
+  color: #012135;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 16px;
+}
+
+.iconLink {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  transition: all 0.2s ease;
+}
+
+.iconLink:hover {
+  background-color: #ffffff;
+  color: #012135;
+}
+
+@media (max-width: 1024px) {
+  .mainFooter {
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainFooter {
+    flex-direction: column;
+    padding: 40px 20px 0;
+  }
+  .portalColumn {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  .logoSection {
+    padding: 30px 20px;
+  }
+  .logoFull img {
+    width: 200px;
+    height: auto;
+  }
+}

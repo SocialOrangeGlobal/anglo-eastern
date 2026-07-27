@@ -1,0 +1,86 @@
+.teamsSection {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.teamCard {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.teamCard:hover .overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 32px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.buttonLight {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.buttonLight:hover {
+  background-color: #f0f0f0;
+}
+
+.buttonDark {
+  background-color: #012135;
+  color: #ffffff;
+}
+
+.buttonDark:hover {
+  background-color: #111111;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .teamCard {
+    height: 300px;
+  }
+}

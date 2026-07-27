@@ -1,0 +1,28 @@
+.introSection {
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.text:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 1.1rem;
+  }
+}

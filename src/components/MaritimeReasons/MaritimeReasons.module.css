@@ -1,0 +1,93 @@
+.reasonsSection {
+  display: flex;
+  background-color: #f2f3f4;
+}
+
+.contentColumn {
+  flex: 1;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.accordionContainer {
+  max-width: 600px;
+  width: 100%;
+}
+
+.accordionItem {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111111;
+}
+
+.accordionIcon {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #111111;
+  transition: transform 0.3s ease;
+}
+
+.active .accordionTitle {
+  color: #111111;
+}
+
+.accordionContentWrapper {
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.accordionContent {
+  padding-bottom: 24px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.imageColumn {
+  flex: 1;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .reasonsSection {
+    flex-direction: column;
+  }
+  
+  .contentColumn {
+    padding: 60px 30px;
+  }
+  
+  .accordionContainer {
+    max-width: 100%;
+  }
+  
+  .imageColumn {
+    min-height: 400px;
+  }
+}

@@ -1,0 +1,53 @@
+.hero {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  background-image: url('https://assets.angloeastern.com/assets/2026/04/Bridge-5-2048x1152.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 32, 53, 0.4); /* Dark blue overlay */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  margin-top: 50px;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.breadcrumb {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}

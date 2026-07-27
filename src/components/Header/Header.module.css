@@ -1,0 +1,417 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* ─── Top Bar (White) ─── */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  position: relative;
+  min-height: 90px;
+  background-color: #ffffff;
+}
+
+/* Transparent variant */
+.topBarTransparent {
+  background-color: rgba(1, 33, 53, 0.4);
+}
+
+/* Navy variant */
+.topBarNavy {
+  background-color: #012135;
+}
+
+.topRightWhite {
+  color: #ffffff;
+}
+
+.myAngloEasternWhite {
+  color: #ffffff !important;
+}
+
+.logoContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logoFull {
+  display: flex;
+  align-items: center;
+}
+
+.logoFull img {
+  width: 250px;
+  height: 40px;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  color: #222222;
+}
+
+.myAngloEastern {
+  font-size: 14px;
+  font-weight: 500;
+  color: #222222;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.myAngloEastern:hover {
+  color: #c8962a;
+}
+
+/* ─── Main Nav ─── */
+.mainNav {
+  background-color: #ffffff;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 4px solid #012135;
+}
+
+.mainNavTransparent {
+  background-color: rgba(1, 33, 53, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: none;
+}
+
+.mainNav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navItem a {
+  display: block;
+  padding: 18px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+}
+
+.navItem:hover>a,
+.activeNavItem>a {
+  color: #000000;
+  border-bottom: 3px solid #000000;
+}
+
+.mainNavTransparent .navItem a {
+  color: #ffffff;
+}
+
+.mainNavTransparent .navItem:hover>a,
+.mainNavTransparent .activeNavItem>a {
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+
+.mainNavNavy {
+  background-color: #012135;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+}
+
+.mainNavNavy .navItem a {
+  color: #ffffff;
+}
+
+.mainNavNavy .navItem:hover>a,
+.mainNavNavy .activeNavItem>a {
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+
+/* ─── Mega Menu Dropdown ─── */
+.megaMenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #e9f0f4;
+  border-top: 3px solid #c8962a;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  z-index: 999;
+  animation: fadeDown 0.18s ease forwards;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.megaMenuContent {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 48px 64px;
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+/* ─── Link Columns ─── */
+.dropdownLists {
+  display: flex;
+  gap: 80px;
+  flex: 1;
+}
+
+.dropdownListColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.listTitle {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.listLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.normalLink {
+  font-size: 15px;
+  color: #111111;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.normalLink:hover {
+  color: #c8962a;
+}
+
+.highlightLink {
+  font-size: 15px;
+  color: #c8962a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.highlightLink:hover {
+  color: #a0741e;
+}
+
+/* ─── Featured Article Card ─── */
+.featuredCard {
+  width: 500px;
+  flex-shrink: 0;
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  min-height: 200px;
+}
+
+.featuredImageContainer {
+  position: relative;
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.featuredImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  padding: 10px 14px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #333333;
+  z-index: 1;
+}
+
+.featuredText {
+  padding: 24px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featuredTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.featuredExcerpt {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555555;
+}
+
+/* ─── Mobile Styles ─── */
+.mobileMenuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002; /* Above drawer */
+}
+
+.mobileMenuToggle span {
+  width: 30px;
+  height: 2px;
+  background: #000000;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.toggleWhite span {
+  background: #ffffff;
+}
+
+.mobileMenuToggle.open span:first-child {
+  transform: rotate(45deg);
+  background: #ffffff; /* Close button always white on dark drawer */
+}
+
+.mobileMenuToggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobileMenuToggle.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  background: #ffffff;
+}
+
+.mobileDrawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 400px;
+  height: 100vh;
+  background-color: #012135; /* Navy */
+  z-index: 1001;
+  transition: right 0.3s ease-in-out;
+  padding: 100px 30px 40px;
+  overflow-y: auto;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+.mobileDrawerOpen {
+  right: 0;
+}
+
+.mobileNavList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobileNavItem > a, .mobileNavItem > span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+.mobileSubNavList {
+  list-style: none;
+  padding: 15px 0 0 15px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobileSubNavList a {
+  font-size: 16px;
+  color: #a4b9c9;
+  text-decoration: none;
+}
+
+.mobileSubNavList a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  .mainNav ul {
+    display: none; /* Hide desktop nav */
+  }
+  .mainNav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 20px;
+  }
+  .mobileMenuToggle {
+    display: flex;
+  }
+  .megaMenu {
+    display: none !important; /* Never show mega menu on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .topBar {
+    padding: 15px 20px;
+    min-height: 70px;
+  }
+  .logoFull img {
+    width: 200px;
+    height: auto;
+  }
+  .topRight {
+    display: none; /* Hide My Anglo Eastern on very small screens or make it a mobile menu item */
+  }
+}

@@ -1,0 +1,6 @@
+.main {
+  min-height: 100vh;
+  /* Since the subnav is absolute positioned and the main header is likely transparent or white, 
+     we might need some padding-top if the header isn't transparent, but let's see how the global layout handles it. 
+     The hero section is already accounting for layout. */
+}

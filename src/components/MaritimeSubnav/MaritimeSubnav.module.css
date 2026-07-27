@@ -1,0 +1,60 @@
+.subnav {
+  background-color: rgba(0, 32, 53, 0.5); /* Semi-transparent dark overlay */
+  position: absolute;
+  top: 80px; /* Assuming header is around 80px */
+  left: 0;
+  width: 100%;
+  z-index: 90;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navList li {
+  margin: 0 15px;
+}
+
+.navList a {
+  display: block;
+  padding: 15px 5px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+}
+
+.navList a:hover {
+  opacity: 0.8;
+}
+
+.homeLink {
+  margin-left: 20px !important;
+}
+
+.homeIcon {
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .navList {
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+  .navList li {
+    margin: 5px 10px;
+  }
+}

@@ -1,0 +1,192 @@
+.section {
+  padding: 0; /* Remove top/bottom padding so image can be full height if needed, but let's keep it on content */
+  background-color: var(--color-bg-white);
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.imageColumn {
+  flex: 0 0 50%;
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+
+.placeholderImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://assets.angloeastern.com/assets/2023/07/captain-briefing-64be033b59f77.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 48px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.playButton:hover {
+  background-color: #f0f0f0;
+}
+
+.contentColumn {
+  flex: 0 0 50%;
+  padding: 80px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #111111;
+  max-width: 500px;
+}
+
+.paragraph {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: #333333;
+  max-width: 600px;
+}
+
+.ctaButton {
+  margin-top: 16px;
+  align-self: flex-start;
+  background-color: transparent;
+  color: #111111;
+  border: 1px solid #111111;
+  padding: 14px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #334e68;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.scrollTop:hover {
+  background-color: var(--color-accent);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.closeButton {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.closeButton:hover {
+  transform: scale(1.1);
+}
+
+.videoContainer {
+  width: 90%;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 992px) {
+  .section {
+    flex-direction: column;
+  }
+  .imageColumn {
+    width: 100%;
+  }
+  .imageWrapper {
+    min-height: 400px;
+  }
+  .contentColumn {
+    width: 100%;
+    padding: 60px 40px;
+  }
+  .heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentColumn {
+    padding: 50px 20px;
+  }
+  .heading {
+    font-size: 28px;
+  }
+}

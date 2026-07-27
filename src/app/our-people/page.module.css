@@ -1,0 +1,4 @@
+.peoplePage {
+  display: flex;
+  flex-direction: column;
+}

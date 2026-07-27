@@ -1,0 +1,103 @@
+.section {
+  padding: 0;
+  background-color: #f2f4f5; /* Light grey off-white matching image */
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.contentColumn {
+  flex: 0 0 50%;
+  padding: 180px 8%; /* Increased vertical padding from 120px to 180px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 24px;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  color: #111111;
+  max-width: 550px;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  color: #333333;
+  max-width: 600px;
+}
+
+.ctaButton {
+  align-self: flex-start;
+  background-color: transparent;
+  color: #111111;
+  border: 1px solid #111111;
+  padding: 16px 28px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.imageColumn {
+  flex: 0 0 50%;
+  position: relative;
+}
+
+.placeholderImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Using the provided ship image */
+  background-image: url('https://assets.angloeastern.com/assets/2023/06/Fueling-the-future.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 992px) {
+  .section {
+    flex-direction: column;
+  }
+  .imageColumn {
+    width: 100%;
+    min-height: 400px;
+  }
+  .contentColumn {
+    width: 100%;
+    padding: 60px 40px;
+  }
+  .heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentColumn {
+    padding: 50px 20px;
+  }
+  .heading {
+    font-size: 28px;
+  }
+}

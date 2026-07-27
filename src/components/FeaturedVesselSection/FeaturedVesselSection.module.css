@@ -1,0 +1,151 @@
+.section {
+  background-color: #f0f2f2;
+  padding: 140px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.leftContent {
+  flex: 0 0 45%;
+}
+
+.subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.heading {
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 32px;
+  color: #111111;
+  max-width: 550px;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  color: #222222;
+  max-width: 520px;
+}
+
+.ctaButton {
+  background-color: transparent;
+  color: #111111;
+  border: 1px solid #111111;
+  padding: 16px 28px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.rightContent {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card {
+  display: flex;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 650px;
+  min-height: 300px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.cardImageContainer {
+  flex: 0 0 55%;
+  position: relative;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  padding: 16px 24px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #555555;
+}
+
+.cardText {
+  flex: 0 0 45%;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111111;
+  line-height: 1.3;
+}
+
+.cardExcerpt {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444444;
+}
+
+@media (max-width: 992px) {
+  .section {
+    flex-direction: column;
+    padding: 80px 20px;
+  }
+  .leftContent {
+    width: 100%;
+  }
+  .rightContent {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+  .card {
+    flex-direction: column;
+  }
+  .cardImageContainer {
+    height: 250px;
+  }
+  .heading {
+    font-size: 28px;
+  }
+}

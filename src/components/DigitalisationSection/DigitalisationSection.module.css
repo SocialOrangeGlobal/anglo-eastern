@@ -1,0 +1,109 @@
+.section {
+  padding: 0;
+  background-color: #9ab4c6; /* Exact blue from screenshot */
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.imageColumn {
+  flex: 0 0 50%;
+  position: relative;
+}
+
+.placeholderImage {
+  position: absolute;
+  top: 0;
+  right: 5%; /* Gap before text column */
+  width: 125%; /* Slightly smaller width */
+  height: 100%; /* Take full height to allow vertical centering */
+  background-image: url('https://assets.angloeastern.com/assets/2024/01/2023_06_MicrosoftTeams-image-1-65ae8b0ad10b7.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center; /* Center vertically */
+}
+
+.contentColumn {
+  flex: 0 0 50%;
+  padding: 140px 10% 140px 2%; /* Reduced left padding to give text more width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  font-size: 11px; /* Smaller subtitle */
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-size: 44px; /* Slightly smaller heading */
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #111111;
+  max-width: 600px;
+}
+
+.paragraph {
+  font-size: 17px; /* Adjusted font size for exact wrapping */
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #222222;
+  max-width: 700px; /* Allow wider text before wrapping */
+}
+
+.ctaButton {
+  align-self: flex-start;
+  background-color: transparent;
+  color: #111111;
+  border: 1px solid #111111;
+  padding: 12px 24px; /* Smaller button */
+  font-size: 12px;
+
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  .section {
+    flex-direction: column-reverse;
+  }
+  .imageColumn {
+    width: 100%;
+    min-height: 400px;
+  }
+  .placeholderImage {
+    width: 100%;
+    right: 0;
+    background-position: center;
+  }
+  .contentColumn {
+    width: 100%;
+    padding: 60px 40px;
+  }
+  .heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentColumn {
+    padding: 50px 20px;
+  }
+  .heading {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,86 @@
+.section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1300px;
+  /* Aligns with nav items in standard large screens */
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.banner {
+  background-color: #012135;
+  color: #ffffff;
+  padding: 50px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  color: #ffffff;
+}
+
+.title {
+  font-size: 56px;
+  /* Increased title size */
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 56px;
+  max-width: 900px;
+  /* Allows the title to span appropriately */
+  color: #ffffff;
+}
+
+.button {
+  padding: 14px 40px;
+  /* Increased padding */
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #012135;
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 0;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .banner {
+    padding: 40px 20px;
+  }
+  .title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+}

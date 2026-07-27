@@ -1,0 +1,118 @@
+.milestonesSection {
+  background-color: #f5f5f5; /* Light grey background */
+  padding: 80px 0;
+  overflow: hidden; /* Prevent horizontal scrollbar on the section itself */
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  gap: 40px;
+}
+
+.textContent {
+  max-width: 800px;
+}
+
+.textContent h2 {
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.navButtons {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.navBtn {
+  width: 40px;
+  height: 40px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.navBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.navBtn:not(:disabled):hover {
+  opacity: 0.8;
+}
+
+.carouselContainer {
+  position: relative;
+  /* Negative margin to allow cards to bleed to the edge of the screen but maintain padding */
+  margin-right: calc(-50vw + 50%);
+  padding-right: calc(50vw - 50%);
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px; /* Space for scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  min-width: 280px;
+  width: 280px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navButtons {
+    display: none; /* Hide buttons on mobile, rely on touch scroll */
+  }
+}

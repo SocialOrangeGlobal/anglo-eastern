@@ -1,0 +1,87 @@
+.performanceSection {
+  background-color: var(--color-bg-white);
+}
+
+.flexContainer {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.imageColumn {
+  flex: 1;
+}
+
+.diagramImage {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.textColumn {
+  flex: 1;
+}
+
+.textColumn h2 {
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.textColumn p {
+  color: var(--color-text-secondary);
+  margin-bottom: 30px;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.featureList li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #000000;
+  font-size: 16px;
+}
+
+.featureList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23c8962a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.learnMoreBtn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid #000000;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.learnMoreBtn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+}

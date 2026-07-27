@@ -1,0 +1,163 @@
+.backboneSection {
+  background-color: var(--color-bg-white);
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #222222;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.diagramContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.labelsLeft, .labelsRight {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+}
+
+.labelsLeft {
+  align-items: flex-end;
+  padding-right: 30px;
+}
+
+.labelsRight {
+  align-items: flex-start;
+  padding-left: 30px;
+}
+
+.label {
+  background-color: #f5f5f5;
+  padding: 15px 25px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  position: relative;
+  width: 250px;
+  text-align: center;
+}
+
+/* Pseudo-elements for lines pointing to the monitor */
+.labelsLeft .label::after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #d0d0d0;
+}
+.labelsLeft .label::before {
+  content: '';
+  position: absolute;
+  right: -34px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+  z-index: 2;
+}
+
+.labelsRight .label::after {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #d0d0d0;
+}
+.labelsRight .label::before {
+  content: '';
+  position: absolute;
+  left: -34px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+  z-index: 2;
+}
+
+.imageContainer {
+  flex: 2;
+  max-width: 600px;
+  z-index: 1;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.securitySection {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.securityTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.buttonsGroup {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.securityButton {
+  background-color: #e2ebf0;
+  color: #002845; /* Dark navy */
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid #c9d6df;
+}
+
+.securityText {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .diagramContainer {
+    flex-direction: column;
+  }
+  .labelsLeft, .labelsRight {
+    align-items: center;
+    padding: 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .labelsLeft .label::after, .labelsRight .label::before {
+    display: none;
+  }
+  .imageContainer {
+    order: -1;
+    margin-bottom: 30px;
+  }
+}

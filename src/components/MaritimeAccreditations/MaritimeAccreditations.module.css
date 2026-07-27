@@ -1,0 +1,40 @@
+.accreditationsSection {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.logoItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.logoImage {
+  max-height: 100%;
+  max-width: 250px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .logos {
+    gap: 40px;
+  }
+  
+  .logoItem {
+    height: 80px;
+  }
+}

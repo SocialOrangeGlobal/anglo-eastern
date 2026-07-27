@@ -1,0 +1,102 @@
+.section {
+  padding: 0;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.contentColumn {
+  flex: 0 0 50%;
+  padding: 200px 8% 200px 10%; /* Increase padding to make section taller for image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 24px;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  color: #111111;
+  max-width: 600px;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  color: #333333;
+  max-width: 530px; /* Force wrapping at the exact words in the screenshot */
+}
+
+.ctaButton {
+  align-self: flex-start;
+  background-color: transparent;
+  color: #111111;
+  border: 1px solid #111111;
+  padding: 16px 28px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.imageColumn {
+  flex: 0 0 50%;
+  position: relative;
+}
+
+.placeholderImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://assets.angloeastern.com/assets/2024/01/2024_01_2023_08_home_sustainability-no_logo-square-webp-2048x1808-1-1536x1356-1.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 992px) {
+  .section {
+    flex-direction: column;
+  }
+  .imageColumn {
+    width: 100%;
+    min-height: 400px;
+  }
+  .contentColumn {
+    width: 100%;
+    padding: 60px 40px;
+  }
+  .heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentColumn {
+    padding: 50px 20px;
+  }
+  .heading {
+    font-size: 28px;
+  }
+}

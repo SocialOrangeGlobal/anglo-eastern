@@ -1,0 +1,31 @@
+.statsSection {
+  background-color: var(--color-bg-white);
+  text-align: center;
+  padding: 80px 0;
+}
+
+.text {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #222222;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.link {
+  color: #2b70f1; /* Bright blue link color */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #1a5ac7;
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 20px;
+  }
+}

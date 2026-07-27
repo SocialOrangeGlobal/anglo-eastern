@@ -1,0 +1,106 @@
+.newsletterSection {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: var(--color-bg-white);
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(1, 33, 53, 0.85); /* Dark navy overlay */
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ffffff;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.checkboxGroup input {
+  margin: 0;
+}
+
+.checkboxGroup label {
+  font-size: 14px;
+  color: #d0d0d0;
+}
+
+.submitBtn {
+  background-color: #2b70f1; /* Bright blue */
+  color: #ffffff;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #1a5ac7;
+}
+
+@media (max-width: 768px) {
+  .inputGroup {
+    flex-direction: column;
+  }
+}

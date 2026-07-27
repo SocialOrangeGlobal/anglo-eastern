@@ -1,0 +1,117 @@
+.valuesSection {
+  background-color: #f7f9fa;
+  padding: 80px 0;
+  color: #111111;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.leftContent {
+  flex: 1;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #c8962a;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #012135;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444444;
+  margin-bottom: 40px;
+}
+
+.accordion {
+  border-top: 1px solid #e0e0e0;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordionHeader {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 30px 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #012135;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.accordionHeader:hover {
+  color: #c8962a;
+}
+
+.active .accordionHeader {
+  color: #c8962a;
+}
+
+.icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.accordionContent {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordionContent p {
+  padding-bottom: 24px;
+  margin: 0;
+  color: #555555;
+  line-height: 1.6;
+}
+
+.rightContent {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .rightContent {
+    justify-content: center;
+    width: 100%;
+  }
+}

@@ -1,0 +1,120 @@
+.solutionsSection {
+  background-color: #f7f9fa; /* Light grey/blue background */
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.flexContainer {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.gridColumn {
+  flex: 3;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.imageCard {
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.gridImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  padding: 12px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+}
+
+.textColumn {
+  flex: 2;
+  display: flex;
+}
+
+.textBox {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border-top: 4px solid #002845;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.boxTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.boxText {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.boxList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.boxList li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.boxList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%23c8962a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.boxList li strong {
+  color: #000000;
+}
+
+@media (max-width: 992px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .imageGrid {
+    grid-template-columns: 1fr;
+  }
+}

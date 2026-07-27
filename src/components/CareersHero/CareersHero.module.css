@@ -1,0 +1,51 @@
+.hero {
+  position: relative;
+  height: 60vh;
+  min-height: 500px;
+  background-image: url('https://assets.angloeastern.com/assets/2023/08/Anglo_Eastern_6-2023_013-small-webp-2048x1302.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.breadcrumb {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}

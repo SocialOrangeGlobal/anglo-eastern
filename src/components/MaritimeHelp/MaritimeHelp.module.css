@@ -1,0 +1,96 @@
+.helpSection {
+  background-color: #f2f3f4;
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.columnTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 30px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.buttonGroupCenter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.outlinedBtn, .filledBtn {
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.outlinedBtn {
+  background-color: transparent;
+  color: #111111;
+  border: 1px solid #111111;
+}
+
+.outlinedBtn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.filledBtn {
+  background-color: #111111;
+  color: #ffffff;
+  border: 1px solid #111111;
+}
+
+.filledBtn:hover {
+  background-color: #333333;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .buttonRow {
+    flex-direction: column;
+  }
+  .buttonGroup {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+}

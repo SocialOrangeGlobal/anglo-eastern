@@ -1,0 +1,26 @@
+.onboardingSection {
+  padding: 80px 0;
+  text-align: center;
+  background-color: var(--color-bg-white);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.description {
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--color-text-primary);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+}

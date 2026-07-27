@@ -1,0 +1,89 @@
+.insightsSection {
+  background-color: #f7f9fa;
+  text-align: center;
+}
+
+.sectionTitle {
+  margin-bottom: 50px;
+}
+
+.cardsGrid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #c8962a; /* Gold color */
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.cardDescription {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .cardsGrid {
+    flex-direction: column;
+  }
+}

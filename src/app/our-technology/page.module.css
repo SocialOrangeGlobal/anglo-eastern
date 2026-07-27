@@ -1,0 +1,4 @@
+.technologyPage {
+  display: flex;
+  flex-direction: column;
+}

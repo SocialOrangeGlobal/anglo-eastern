@@ -1,0 +1,149 @@
+.contactSection {
+  position: relative;
+  background-image: url('https://assets.angloeastern.com/assets/2024/05/contact-us-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: var(--color-bg-white);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(1, 33, 53, 0.9), rgba(1, 33, 53, 0.4));
+  z-index: 1;
+}
+
+.flexContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 60px;
+}
+
+.formColumn {
+  flex: 2;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formRow {
+  display: flex;
+  gap: 20px;
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 4px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.checkboxGroup input {
+  margin-top: 4px;
+}
+
+.checkboxGroup label {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #d0d0d0;
+}
+
+.submitBtn {
+  background-color: #007bff; /* Adjust to exact blue if needed, looks like a standard blue */
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #0056b3;
+}
+
+.infoColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infoTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+
+.infoTitle:first-child {
+  margin-top: 0;
+}
+
+.infoLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.infoLink:hover {
+  border-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+  .formRow {
+    flex-direction: column;
+  }
+}
